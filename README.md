@@ -3,12 +3,11 @@
 </p>
 
 <p align="center">
-  <b>Шаблон репозитория для ИИ-проектов на хакатоне</b><br>
-  Рабочий каркас из трёх сервисов и процесс, по которому ИИ-агент ведёт проект от брифа до проверенных коммитов.
+  <img src="docs/assets/readme/tagline.svg" width="100%" alt="Repository template for AI projects">
 </p>
 
 <p align="center">
-  <img src="docs/assets/readme/stack.svg" width="100%" alt="Стек: React, Vite, TypeScript, Tailwind, FastAPI, SQLAlchemy, Postgres, Anthropic Messages API, Docker Compose, uv">
+  Рабочий каркас из трёх сервисов и процесс, по которому ИИ-агент ведёт проект от брифа до проверенных коммитов.
 </p>
 
 <p align="center">

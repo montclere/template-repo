@@ -36,12 +36,8 @@ SECTIONS = [
 
 MONO_CHAR = 7.2
 
-STACK = [
-    ("frontend", ["React", "Vite", "TypeScript", "Tailwind", "shadcn/ui"]),
-    ("backend", ["FastAPI", "SQLAlchemy", "Postgres", "pgvector"]),
-    ("ml", ["FastAPI", "Anthropic Messages API", "evals"]),
-    ("tooling", ["Docker Compose", "uv", "ruff", "pre-commit", "GitHub Actions"]),
-]
+TAGLINE = "Repository template for AI projects"
+TYPE_START, TYPE_STEP, HOLD_UNTIL, ERASE_STEP, CYCLE = 0.4, 0.09, 7.5, 0.035, 10.0
 
 SERVICES = [
     ("frontend", "Vite + React", "screens only"),
@@ -168,30 +164,52 @@ def footer() -> str:
     return svg(680, 150, "end of sequence: brief → tasks → verified commits", style, body)
 
 
-def stack() -> str:
-    style = f"""
-.mono{{font-family:{MONO}}}
-.pill{{fill:none;stroke:{EDGE};animation:glow 4s ease-in-out infinite}}
-@keyframes glow{{0%,100%{{stroke:{EDGE}}}35%{{stroke:{V3}}}}}"""
-    rows, i = [], 0
-    for row, (service, items) in enumerate(STACK):
-        y = 34 + row * 32
-        rows.append(
-            f'<text class="mono" x="36" y="{y + 4}" fill="{V3}" font-size="12">{service}</text>'
+def tagline() -> str:
+    """Typewriter loop: types the line, holds it, erases it, starts again. Transparent background."""
+    n, cell, size = len(TAGLINE), 18, 30
+    x0 = (680 - n * cell) / 2
+    typed = [TYPE_START + (i + 1) * TYPE_STEP for i in range(n)]
+    erased = [HOLD_UNTIL + (n - 1 - i) * ERASE_STEP for i in range(n)]
+
+    def pct(seconds: float) -> str:
+        return f"{seconds / CYCLE * 100:.2f}%"
+
+    rules = [
+        f".t{{font-family:{MONO};font-weight:700}}",
+        f".c{{animation:{CYCLE}s steps(1,end) infinite}}",
+        f".caret{{fill:{V3};animation:move {CYCLE}s steps(1,end) infinite}}",
+        ".blink{animation:blink 1s steps(1) infinite}",
+        "@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}",
+    ]
+    glyphs = []
+    for i, ch in enumerate(TAGLINE):
+        if ch == " ":
+            continue
+        rules.append(
+            f"@keyframes c{i}{{0%{{opacity:0}}{pct(typed[i])}{{opacity:1}}"
+            f"{pct(erased[i])},100%{{opacity:0}}}}"
         )
-        x = 132
-        for item in items:
-            width = round(len(item) * MONO_CHAR + 20)
-            rows.append(
-                f'<rect class="pill" x="{x}" y="{y - 12}" width="{width}" height="22" rx="11" '
-                f'style="animation-delay:{i * 0.18:.2f}s"/>\n'
-                f'<text class="mono" x="{x + width / 2:.1f}" y="{y + 3}" text-anchor="middle" '
-                f'fill="{WHITE}" font-size="12">{item}</text>'
-            )
-            x += width + 8
-            i += 1
-    body = f"{frame(680, 150)}\n" + "\n".join(rows)
-    return svg(680, 150, "stack: React, FastAPI, Postgres, Anthropic API, Docker", style, body)
+        glyphs.append(
+            f'<text class="t c" x="{x0 + i * cell:.0f}" y="40" font-size="{size}" '
+            f'style="animation-name:c{i}">{ch}</text>'
+        )
+    steps = [f"0%{{transform:translateX({-n * cell}px)}}"]
+    steps += [
+        f"{pct(t)}{{transform:translateX({(i + 1 - n) * cell}px)}}" for i, t in enumerate(typed)
+    ]
+    steps += [
+        f"{pct(erased[i])}{{transform:translateX({(i - n) * cell}px)}}" for i in reversed(range(n))
+    ]
+    rules.append("@keyframes move{" + "".join(steps) + "}")
+
+    body = f"""<defs><linearGradient id="ink" gradientUnits="userSpaceOnUse" x1="{x0:.0f}" x2="{x0 + n * cell:.0f}" y1="0" y2="0">
+<stop offset="0" stop-color="{V2}"/><stop offset="1" stop-color="{V3}"/>
+</linearGradient></defs>
+<g fill="url(#ink)">
+{chr(10).join(glyphs)}
+</g>
+<g class="blink"><rect class="caret" x="{x0 + n * cell + 2:.0f}" y="14" width="3" height="32"/></g>"""
+    return svg(680, 56, TAGLINE, "\n".join(rules), body)
 
 
 def architecture() -> str:
@@ -291,7 +309,7 @@ def main(out_dir: str) -> None:
     out.mkdir(parents=True, exist_ok=True)
     pictures = {
         "header": header,
-        "stack": stack,
+        "tagline": tagline,
         "architecture": architecture,
         "workflow": workflow,
         "footer": footer,
