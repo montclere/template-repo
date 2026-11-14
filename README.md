@@ -7,15 +7,15 @@
 </p>
 
 <p align="center">
-  <a href="#идея"><img src="docs/assets/readme/nav-01.svg" height="34" alt="Идея"></a>
-  <a href="#как-устроено"><img src="docs/assets/readme/nav-02.svg" height="34" alt="Как устроено"></a>
-  <a href="#быстрый-старт"><img src="docs/assets/readme/nav-03.svg" height="34" alt="Быстрый старт"></a>
-  <a href="#как-вести-проект"><img src="docs/assets/readme/nav-04.svg" height="34" alt="Как вести проект"></a>
+  <a href="#идея"><img src="docs/assets/readme/nav-01.svg" height="30" alt="idea"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#как-устроено"><img src="docs/assets/readme/nav-02.svg" height="30" alt="architecture"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#быстрый-старт"><img src="docs/assets/readme/nav-03.svg" height="30" alt="quick start"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#как-вести-проект"><img src="docs/assets/readme/nav-04.svg" height="30" alt="workflow"></a>
   <br>
-  <a href="#куда-писать-код"><img src="docs/assets/readme/nav-05.svg" height="34" alt="Куда писать код"></a>
-  <a href="#ии-часть"><img src="docs/assets/readme/nav-06.svg" height="34" alt="ИИ-часть"></a>
-  <a href="#проверки"><img src="docs/assets/readme/nav-07.svg" height="34" alt="Проверки"></a>
-  <a href="#вопросы-и-ответы"><img src="docs/assets/readme/nav-12.svg" height="34" alt="Вопросы"></a>
+  <a href="#куда-писать-код"><img src="docs/assets/readme/nav-05.svg" height="30" alt="where to code"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#ии-часть"><img src="docs/assets/readme/nav-06.svg" height="30" alt="ai layer"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#проверки"><img src="docs/assets/readme/nav-07.svg" height="30" alt="checks"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
+  <a href="#вопросы-и-ответы"><img src="docs/assets/readme/nav-12.svg" height="30" alt="faq"></a>
 </p>
 
 <img src="docs/assets/readme/divider-01.svg" width="100%" alt="">
