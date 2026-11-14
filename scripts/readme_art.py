@@ -17,10 +17,7 @@ FAINT = "#4A4466"
 MONO = "'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
 
-# System terminal font for the typewriter line. Each glyph is centred in a 0.6em cell,
-# so any monospace font the viewer has lines up evenly.
-TERMINAL = "ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
-CELL_EM = 0.6
+CELL_EM = 0.6  # every glyph is this many em wide
 
 REDUCED = "@media (prefers-reduced-motion: reduce){*{animation:none!important}}"
 
@@ -172,24 +169,28 @@ def footer() -> str:
     return svg(680, 150, "end of sequence: brief → tasks → verified commits", style, body)
 
 
+def text_style() -> str:
+    return f".t{{font-family:{SANS};font-weight:500}}"
+
+
 def nav_link(label: str) -> str:
-    """One menu link: plain system UI font in violet. Wide enough for any fallback font."""
-    size, height, pad = 15, 30, 6
-    width = round(len(label) * size * 0.56 + pad * 2)
+    """One menu link: violet text, no background."""
+    size, height, pad = 12, 26, 4
+    width = round(len(label) * size * CELL_EM + pad * 2)
     body = (
-        f'<text x="{width / 2}" y="19" text-anchor="middle" fill="{V3}" font-size="{size}" '
-        f'font-family="{SANS}" font-weight="500">{label}</text>'
+        f'<text class="t" x="{width / 2}" y="17" text-anchor="middle" fill="{V3}" '
+        f'font-size="{size}">{label}</text>'
     )
-    return svg(width, height, label, "", body)
+    return svg(width, height, label, text_style(), body)
 
 
 def nav_separator() -> str:
-    return svg(18, 30, "·", "", f'<circle cx="9" cy="13" r="1.8" fill="{DIM}"/>')
+    return svg(16, 26, "·", "", f'<circle cx="8" cy="13.5" r="1.6" fill="{DIM}"/>')
 
 
 def tagline() -> str:
     """Typewriter loop: types the line, holds it, erases it, starts again. Transparent background."""
-    n, size = len(TAGLINE), 28
+    n, size = len(TAGLINE), 20
     cell = size * CELL_EM
     x0 = (680 - n * cell) / 2
     typed = [TYPE_START + (i + 1) * TYPE_STEP for i in range(n)]
@@ -199,7 +200,7 @@ def tagline() -> str:
         return f"{seconds / CYCLE * 100:.2f}%"
 
     rules = [
-        f".t{{font-family:{TERMINAL};font-weight:500}}",
+        text_style(),
         f".c{{animation:{CYCLE}s steps(1,end) infinite}}",
         f".caret{{fill:{V3};animation:move {CYCLE}s steps(1,end) infinite}}",
         ".blink{animation:blink 1s steps(1) infinite}",
@@ -214,7 +215,7 @@ def tagline() -> str:
             f"{pct(erased[i])},100%{{opacity:0}}}}"
         )
         glyphs.append(
-            f'<text class="t c" x="{x0 + (i + 0.5) * cell:.2f}" y="38" text-anchor="middle" font-size="{size}" '
+            f'<text class="t c" x="{x0 + (i + 0.5) * cell:.2f}" y="30" text-anchor="middle" font-size="{size}" '
             f'style="animation-name:c{i}">{ch}</text>'
         )
     steps = [f"0%{{transform:translateX({-n * cell:.2f}px)}}"]
@@ -233,8 +234,8 @@ def tagline() -> str:
 <g fill="url(#ink)">
 {chr(10).join(glyphs)}
 </g>
-<g class="blink"><rect class="caret" x="{x0 + n * cell + 2:.0f}" y="15" width="3" height="28"/></g>"""
-    return svg(680, 56, TAGLINE, "\n".join(rules), body)
+<g class="blink"><rect class="caret" x="{x0 + n * cell + 2:.0f}" y="11" width="2" height="23"/></g>"""
+    return svg(680, 42, TAGLINE, "\n".join(rules), body)
 
 
 def architecture() -> str:
