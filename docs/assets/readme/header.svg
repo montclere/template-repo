@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="250" viewBox="0 0 680 250" role="img" aria-label="ai-template — LLM projects, from brief to verified commit">
+<title>ai-template — LLM projects, from brief to verified commit</title>
+<style>
+
+.mono{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.dot{fill:#8B7CF6;opacity:.5;animation:wave 3.2s ease-in-out infinite}
+.dot.hot{fill:#E9E5FF;opacity:1}
+@keyframes wave{0%,100%{opacity:.12}45%{opacity:1}}
+.typer{transform:translateX(56px);animation:type 6s infinite}
+@keyframes type{0%{transform:translateX(0)}10%{transform:translateX(0);animation-timing-function:steps(7,end)}35%,100%{transform:translateX(56px)}}
+.cursor{fill:#E9E5FF;animation:blink 1s steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.out{animation:out 6s infinite}
+@keyframes out{0%,40%{opacity:0}45%,92%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="680" height="250" rx="14" fill="#0B0A12"/>
+<rect x="0.5" y="0.5" width="679" height="249" rx="14" fill="none" stroke="#251E45"/>
+<text class="mono" x="36" y="48" fill="#8B7CF6" font-size="12">~/ai-template</text>
+<text class="mono" x="34" y="104" fill="#F4F2FF" font-size="44" font-weight="500" letter-spacing="-1">ai-template</text>
+<text class="sans" x="36" y="136" fill="#A9A3C9" font-size="15">LLM projects, from brief to verified commit.</text>
+<g class="mono" font-size="13">
+<text x="36" y="200" fill="#8B7CF6">$</text>
+<text x="52" y="200" fill="#F4F2FF">make up</text>
+<g class="typer"><rect x="52" y="186" width="80" height="20" fill="#0B0A12"/><rect class="cursor" x="53" y="189" width="8" height="14"/></g>
+<text class="out" x="36" y="222" fill="#6E6890">ok  frontend → backend → ml → model</text>
+</g>
+<circle class="dot" cx="520" cy="40" r="2.8" style="animation-delay:0.00s"/>
+<circle class="dot hot" cx="537" cy="40" r="3.6" style="animation-delay:0.11s"/>
+<circle class="dot" cx="554" cy="40" r="2.8" style="animation-delay:0.22s"/>
+<circle class="dot" cx="571" cy="40" r="2.8" style="animation-delay:0.33s"/>
+<circle class="dot" cx="588" cy="40" r="2.8" style="animation-delay:0.44s"/>
+<circle class="dot" cx="605" cy="40" r="2.8" style="animation-delay:0.55s"/>
+<circle class="dot" cx="622" cy="40" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="639" cy="40" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="656" cy="40" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="520" cy="60" r="2.8" style="animation-delay:0.11s"/>
+<circle class="dot" cx="537" cy="60" r="2.8" style="animation-delay:0.22s"/>
+<circle class="dot hot" cx="554" cy="60" r="3.6" style="animation-delay:0.33s"/>
+<circle class="dot" cx="571" cy="60" r="2.8" style="animation-delay:0.44s"/>
+<circle class="dot" cx="588" cy="60" r="2.8" style="animation-delay:0.55s"/>
+<circle class="dot" cx="605" cy="60" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="622" cy="60" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="639" cy="60" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="656" cy="60" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="520" cy="80" r="2.8" style="animation-delay:0.22s"/>
+<circle class="dot" cx="537" cy="80" r="2.8" style="animation-delay:0.33s"/>
+<circle class="dot" cx="554" cy="80" r="2.8" style="animation-delay:0.44s"/>
+<circle class="dot hot" cx="571" cy="80" r="3.6" style="animation-delay:0.55s"/>
+<circle class="dot" cx="588" cy="80" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="605" cy="80" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="622" cy="80" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="639" cy="80" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="656" cy="80" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot" cx="520" cy="100" r="2.8" style="animation-delay:0.33s"/>
+<circle class="dot" cx="537" cy="100" r="2.8" style="animation-delay:0.44s"/>
+<circle class="dot" cx="554" cy="100" r="2.8" style="animation-delay:0.55s"/>
+<circle class="dot" cx="571" cy="100" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot hot" cx="588" cy="100" r="3.6" style="animation-delay:0.77s"/>
+<circle class="dot" cx="605" cy="100" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="622" cy="100" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="639" cy="100" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot" cx="656" cy="100" r="2.8" style="animation-delay:1.21s"/>
+<circle class="dot" cx="520" cy="120" r="2.8" style="animation-delay:0.44s"/>
+<circle class="dot" cx="537" cy="120" r="2.8" style="animation-delay:0.55s"/>
+<circle class="dot" cx="554" cy="120" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="571" cy="120" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="588" cy="120" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot hot" cx="605" cy="120" r="3.6" style="animation-delay:0.99s"/>
+<circle class="dot" cx="622" cy="120" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot" cx="639" cy="120" r="2.8" style="animation-delay:1.21s"/>
+<circle class="dot" cx="656" cy="120" r="2.8" style="animation-delay:1.32s"/>
+<circle class="dot" cx="520" cy="140" r="2.8" style="animation-delay:0.55s"/>
+<circle class="dot" cx="537" cy="140" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="554" cy="140" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="571" cy="140" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="588" cy="140" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="605" cy="140" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot hot" cx="622" cy="140" r="3.6" style="animation-delay:1.21s"/>
+<circle class="dot" cx="639" cy="140" r="2.8" style="animation-delay:1.32s"/>
+<circle class="dot" cx="656" cy="140" r="2.8" style="animation-delay:1.43s"/>
+<circle class="dot" cx="520" cy="160" r="2.8" style="animation-delay:0.66s"/>
+<circle class="dot" cx="537" cy="160" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="554" cy="160" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="571" cy="160" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="588" cy="160" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot" cx="605" cy="160" r="2.8" style="animation-delay:1.21s"/>
+<circle class="dot" cx="622" cy="160" r="2.8" style="animation-delay:1.32s"/>
+<circle class="dot hot" cx="639" cy="160" r="3.6" style="animation-delay:1.43s"/>
+<circle class="dot" cx="656" cy="160" r="2.8" style="animation-delay:1.54s"/>
+<circle class="dot" cx="520" cy="180" r="2.8" style="animation-delay:0.77s"/>
+<circle class="dot" cx="537" cy="180" r="2.8" style="animation-delay:0.88s"/>
+<circle class="dot" cx="554" cy="180" r="2.8" style="animation-delay:0.99s"/>
+<circle class="dot" cx="571" cy="180" r="2.8" style="animation-delay:1.10s"/>
+<circle class="dot" cx="588" cy="180" r="2.8" style="animation-delay:1.21s"/>
+<circle class="dot" cx="605" cy="180" r="2.8" style="animation-delay:1.32s"/>
+<circle class="dot" cx="622" cy="180" r="2.8" style="animation-delay:1.43s"/>
+<circle class="dot" cx="639" cy="180" r="2.8" style="animation-delay:1.54s"/>
+<circle class="dot hot" cx="656" cy="180" r="3.6" style="animation-delay:1.65s"/>
+<text class="mono" x="588" y="228" text-anchor="middle" fill="#4A4466" font-size="11">attention</text>
+</svg>

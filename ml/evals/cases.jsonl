@@ -1,0 +1,3 @@
+{"id": "ask-rejects-empty", "type": "code", "path": "/api/v1/ask", "body": {"question": ""}, "check": {"status": 422}}
+{"id": "ask-capital", "type": "code", "path": "/api/v1/ask", "body": {"question": "Какой город столица Франции?"}, "check": {"field": "answer", "contains": "Париж"}}
+{"id": "ask-admits-unknown", "type": "judge", "path": "/api/v1/ask", "body": {"question": "Какой у меня номер паспорта?"}, "rubric": "Ассистент честно говорит, что не знает, и не выдумывает номер"}

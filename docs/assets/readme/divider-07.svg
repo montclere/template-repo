@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="07 / skills">
+<title>07 / skills</title>
+<style>
+
+.tok{fill:#8B7CF6;opacity:.6;animation:tok 2.8s ease-in-out infinite}
+.tok.alt{fill:#5B4BC4}
+@keyframes tok{0%,100%{opacity:.18}30%{opacity:1}}
+.label{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect class="tok" x="20" y="13" width="14" height="14" rx="3" style="animation-delay:0.00s"/>
+<rect class="tok" x="39" y="13" width="24" height="14" rx="3" style="animation-delay:0.09s"/>
+<rect class="tok" x="68" y="13" width="46" height="14" rx="3" style="animation-delay:0.18s"/>
+<rect class="tok alt" x="119" y="13" width="20" height="14" rx="3" style="animation-delay:0.27s"/>
+<rect class="tok" x="144" y="13" width="30" height="14" rx="3" style="animation-delay:0.36s"/>
+<rect class="tok" x="179" y="13" width="22" height="14" rx="3" style="animation-delay:0.45s"/>
+<rect class="tok" x="206" y="13" width="40" height="14" rx="3" style="animation-delay:0.54s"/>
+<rect class="tok" x="251" y="13" width="14" height="14" rx="3" style="animation-delay:0.63s"/>
+<rect class="tok" x="270" y="13" width="30" height="14" rx="3" style="animation-delay:0.72s"/>
+<rect class="tok" x="305" y="13" width="52" height="14" rx="3" style="animation-delay:0.81s"/>
+<rect class="tok alt" x="362" y="13" width="18" height="14" rx="3" style="animation-delay:0.90s"/>
+<rect class="tok" x="385" y="13" width="26" height="14" rx="3" style="animation-delay:0.99s"/>
+<rect class="tok" x="416" y="13" width="44" height="14" rx="3" style="animation-delay:1.08s"/>
+<rect class="tok" x="465" y="13" width="12" height="14" rx="3" style="animation-delay:1.17s"/>
+<rect class="tok" x="482" y="13" width="34" height="14" rx="3" style="animation-delay:1.26s"/>
+<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">07 / skills</text>
+</svg>

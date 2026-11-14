@@ -1,0 +1,9 @@
+.venv
+__pycache__
+*.pyc
+notebooks
+*.ipynb
+tests
+.env
+logs
+evals/results

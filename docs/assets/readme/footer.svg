@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="150" viewBox="0 0 680 150" role="img" aria-label="end of sequence: brief → tasks → verified commits">
+<title>end of sequence: brief → tasks → verified commits</title>
+<style>
+
+.mono{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.dot{fill:#8B7CF6;animation:wave 3.2s ease-in-out infinite}
+@keyframes wave{0%,100%{opacity:.12}45%{opacity:1}}
+.eos{animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="680" height="150" rx="14" fill="#0B0A12"/>
+<rect x="0.5" y="0.5" width="679" height="149" rx="14" fill="none" stroke="#251E45"/>
+<g opacity="1.00"><circle class="dot" cx="36.0" cy="36" r="2.4" style="animation-delay:0.00s"/></g>
+<g opacity="0.97"><circle class="dot" cx="54.6" cy="36" r="2.4" style="animation-delay:0.07s"/></g>
+<g opacity="0.94"><circle class="dot" cx="73.2" cy="36" r="2.4" style="animation-delay:0.14s"/></g>
+<g opacity="0.91"><circle class="dot" cx="91.8" cy="36" r="2.4" style="animation-delay:0.21s"/></g>
+<g opacity="0.88"><circle class="dot" cx="110.4" cy="36" r="2.4" style="animation-delay:0.28s"/></g>
+<g opacity="0.85"><circle class="dot" cx="129.0" cy="36" r="2.4" style="animation-delay:0.35s"/></g>
+<g opacity="0.82"><circle class="dot" cx="147.6" cy="36" r="2.4" style="animation-delay:0.42s"/></g>
+<g opacity="0.79"><circle class="dot" cx="166.2" cy="36" r="2.4" style="animation-delay:0.49s"/></g>
+<g opacity="0.76"><circle class="dot" cx="184.8" cy="36" r="2.4" style="animation-delay:0.56s"/></g>
+<g opacity="0.74"><circle class="dot" cx="203.4" cy="36" r="2.4" style="animation-delay:0.63s"/></g>
+<g opacity="0.71"><circle class="dot" cx="222.0" cy="36" r="2.4" style="animation-delay:0.70s"/></g>
+<g opacity="0.68"><circle class="dot" cx="240.6" cy="36" r="2.4" style="animation-delay:0.77s"/></g>
+<g opacity="0.65"><circle class="dot" cx="259.2" cy="36" r="2.4" style="animation-delay:0.84s"/></g>
+<g opacity="0.62"><circle class="dot" cx="277.8" cy="36" r="2.4" style="animation-delay:0.91s"/></g>
+<g opacity="0.59"><circle class="dot" cx="296.4" cy="36" r="2.4" style="animation-delay:0.98s"/></g>
+<g opacity="0.56"><circle class="dot" cx="315.0" cy="36" r="2.4" style="animation-delay:1.05s"/></g>
+<g opacity="0.53"><circle class="dot" cx="333.6" cy="36" r="2.4" style="animation-delay:1.12s"/></g>
+<g opacity="0.50"><circle class="dot" cx="352.2" cy="36" r="2.4" style="animation-delay:1.19s"/></g>
+<g opacity="0.47"><circle class="dot" cx="370.8" cy="36" r="2.4" style="animation-delay:1.26s"/></g>
+<g opacity="0.44"><circle class="dot" cx="389.4" cy="36" r="2.4" style="animation-delay:1.33s"/></g>
+<g opacity="0.41"><circle class="dot" cx="408.0" cy="36" r="2.4" style="animation-delay:1.40s"/></g>
+<g opacity="0.38"><circle class="dot" cx="426.6" cy="36" r="2.4" style="animation-delay:1.47s"/></g>
+<g opacity="0.35"><circle class="dot" cx="445.2" cy="36" r="2.4" style="animation-delay:1.54s"/></g>
+<g opacity="0.32"><circle class="dot" cx="463.8" cy="36" r="2.4" style="animation-delay:1.61s"/></g>
+<g opacity="0.29"><circle class="dot" cx="482.4" cy="36" r="2.4" style="animation-delay:1.68s"/></g>
+<g opacity="0.26"><circle class="dot" cx="501.0" cy="36" r="2.4" style="animation-delay:1.75s"/></g>
+<g opacity="0.24"><circle class="dot" cx="519.6" cy="36" r="2.4" style="animation-delay:1.82s"/></g>
+<g opacity="0.21"><circle class="dot" cx="538.2" cy="36" r="2.4" style="animation-delay:1.89s"/></g>
+<g opacity="0.18"><circle class="dot" cx="556.8" cy="36" r="2.4" style="animation-delay:1.96s"/></g>
+<g opacity="0.15"><circle class="dot" cx="575.4" cy="36" r="2.4" style="animation-delay:2.03s"/></g>
+<g opacity="0.12"><circle class="dot" cx="594.0" cy="36" r="2.4" style="animation-delay:2.10s"/></g>
+<g opacity="0.09"><circle class="dot" cx="612.6" cy="36" r="2.4" style="animation-delay:2.17s"/></g>
+<g opacity="0.06"><circle class="dot" cx="631.2" cy="36" r="2.4" style="animation-delay:2.24s"/></g>
+<g opacity="0.03"><circle class="dot" cx="649.8" cy="36" r="2.4" style="animation-delay:2.31s"/></g>
+<rect class="eos" x="36" y="74" width="72" height="30" rx="6" fill="none" stroke="#E9E5FF"/>
+<text class="mono" x="72" y="94" text-anchor="middle" fill="#E9E5FF" font-size="14">&lt;eos&gt;</text>
+<text class="sans" x="124" y="88" fill="#F4F2FF" font-size="14">brief → tasks → verified commits</text>
+<text class="mono" x="124" y="108" fill="#6E6890" font-size="12">make check · make smoke · make eval</text>
+<text class="mono" x="644" y="108" text-anchor="end" fill="#4A4466" font-size="11">built for hackathons</text>
+</svg>

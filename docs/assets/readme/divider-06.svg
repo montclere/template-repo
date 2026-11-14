@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="06 / checks">
+<title>06 / checks</title>
+<style>
+
+.tok{fill:#8B7CF6;opacity:.6;animation:tok 2.8s ease-in-out infinite}
+.tok.alt{fill:#5B4BC4}
+@keyframes tok{0%,100%{opacity:.18}30%{opacity:1}}
+.label{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect class="tok" x="20" y="13" width="20" height="14" rx="3" style="animation-delay:0.00s"/>
+<rect class="tok" x="45" y="13" width="48" height="14" rx="3" style="animation-delay:0.09s"/>
+<rect class="tok" x="98" y="13" width="16" height="14" rx="3" style="animation-delay:0.18s"/>
+<rect class="tok alt" x="119" y="13" width="28" height="14" rx="3" style="animation-delay:0.27s"/>
+<rect class="tok" x="152" y="13" width="38" height="14" rx="3" style="animation-delay:0.36s"/>
+<rect class="tok" x="195" y="13" width="14" height="14" rx="3" style="animation-delay:0.45s"/>
+<rect class="tok" x="214" y="13" width="24" height="14" rx="3" style="animation-delay:0.54s"/>
+<rect class="tok" x="243" y="13" width="46" height="14" rx="3" style="animation-delay:0.63s"/>
+<rect class="tok" x="294" y="13" width="20" height="14" rx="3" style="animation-delay:0.72s"/>
+<rect class="tok" x="319" y="13" width="30" height="14" rx="3" style="animation-delay:0.81s"/>
+<rect class="tok alt" x="354" y="13" width="22" height="14" rx="3" style="animation-delay:0.90s"/>
+<rect class="tok" x="381" y="13" width="40" height="14" rx="3" style="animation-delay:0.99s"/>
+<rect class="tok" x="426" y="13" width="14" height="14" rx="3" style="animation-delay:1.08s"/>
+<rect class="tok" x="445" y="13" width="30" height="14" rx="3" style="animation-delay:1.17s"/>
+<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">06 / checks</text>
+</svg>
