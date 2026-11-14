@@ -20,19 +20,45 @@ SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,A
 REDUCED = "@media (prefers-reduced-motion: reduce){*{animation:none!important}}"
 
 SECTIONS = [
+    "idea",
     "architecture",
     "quick start",
     "workflow",
-    "repo map",
+    "where to code",
     "ai layer",
     "checks",
-    "skills",
+    "repo map",
     "agent rules",
     "commands",
     "teamwork",
-    "out of scope",
-    "other agents",
+    "faq",
 ]
+
+MONO_CHAR = 7.2
+
+STACK = [
+    ("frontend", ["React", "Vite", "TypeScript", "Tailwind", "shadcn/ui"]),
+    ("backend", ["FastAPI", "SQLAlchemy", "Postgres", "pgvector"]),
+    ("ml", ["FastAPI", "Anthropic Messages API", "evals"]),
+    ("tooling", ["Docker Compose", "uv", "ruff", "pre-commit", "GitHub Actions"]),
+]
+
+SERVICES = [
+    ("frontend", "Vite + React", "screens only"),
+    ("backend", "FastAPI", "data + rules"),
+    ("ml", "FastAPI", "prompts · RAG · agents"),
+    ("model", "Anthropic API", "key lives in ml"),
+]
+
+STEPS = [
+    ("input", "docs/input/"),
+    ("brief", "docs/BRIEF.md"),
+    ("approve", "you sign off"),
+    ("tasks", "one at a time"),
+    ("review", "V1 · V2, 1–5"),
+]
+
+TASK_LOOP = ["steps", "code", "make check", "PROGRESS.md", "commit T&lt;n&gt;"]
 
 
 def svg(width: int, height: int, title: str, style: str, body: str) -> str:
@@ -142,14 +168,139 @@ def footer() -> str:
     return svg(680, 150, "end of sequence: brief → tasks → verified commits", style, body)
 
 
+def stack() -> str:
+    style = f"""
+.mono{{font-family:{MONO}}}
+.pill{{fill:none;stroke:{EDGE};animation:glow 4s ease-in-out infinite}}
+@keyframes glow{{0%,100%{{stroke:{EDGE}}}35%{{stroke:{V3}}}}}"""
+    rows, i = [], 0
+    for row, (service, items) in enumerate(STACK):
+        y = 34 + row * 32
+        rows.append(
+            f'<text class="mono" x="36" y="{y + 4}" fill="{V3}" font-size="12">{service}</text>'
+        )
+        x = 132
+        for item in items:
+            width = round(len(item) * MONO_CHAR + 20)
+            rows.append(
+                f'<rect class="pill" x="{x}" y="{y - 12}" width="{width}" height="22" rx="11" '
+                f'style="animation-delay:{i * 0.18:.2f}s"/>\n'
+                f'<text class="mono" x="{x + width / 2:.1f}" y="{y + 3}" text-anchor="middle" '
+                f'fill="{WHITE}" font-size="12">{item}</text>'
+            )
+            x += width + 8
+            i += 1
+    body = f"{frame(680, 150)}\n" + "\n".join(rows)
+    return svg(680, 150, "stack: React, FastAPI, Postgres, Anthropic API, Docker", style, body)
+
+
+def architecture() -> str:
+    style = f"""
+.mono{{font-family:{MONO}}}
+.sans{{font-family:{SANS}}}
+.req{{fill:{V3};animation:req 3.2s linear infinite}}
+.res{{fill:{ACC};opacity:0;animation:res 3.2s linear infinite}}
+@keyframes req{{0%{{transform:translateX(0);opacity:1}}25%{{transform:translateX(20px);opacity:1}}26%,100%{{opacity:0}}}}
+@keyframes res{{0%,50%{{opacity:0;transform:translateX(20px)}}51%{{opacity:1;transform:translateX(20px)}}75%{{opacity:1;transform:translateX(0)}}76%,100%{{opacity:0}}}}
+.db{{animation:breathe 3.2s ease-in-out infinite}}
+@keyframes breathe{{0%,100%{{opacity:.45}}50%{{opacity:1}}}}"""
+    box_w, gap, top, box_h = 128, 32, 44, 78
+    parts = [frame(680, 196)]
+    for i, (name, tech, role) in enumerate(SERVICES):
+        x = 36 + i * (box_w + gap)
+        cx = x + box_w / 2
+        stroke = V2 if name != "model" else FAINT
+        parts.append(
+            f'<rect x="{x}" y="{top}" width="{box_w}" height="{box_h}" rx="10" fill="none" stroke="{stroke}"/>\n'
+            f'<text class="mono" x="{cx:.0f}" y="{top + 28}" text-anchor="middle" fill="{WHITE}" font-size="14">{name}</text>\n'
+            f'<text class="sans" x="{cx:.0f}" y="{top + 48}" text-anchor="middle" fill="{MUTED}" font-size="11">{tech}</text>\n'
+            f'<text class="sans" x="{cx:.0f}" y="{top + 64}" text-anchor="middle" fill="{DIM}" font-size="11">{role}</text>'
+        )
+        if i < len(SERVICES) - 1:
+            gx = x + box_w + 6
+            y = top + box_h / 2
+            parts.append(
+                f'<line x1="{x + box_w + 2}" y1="{y}" x2="{x + box_w + gap - 2}" y2="{y}" stroke="{EDGE}"/>\n'
+                f'<circle class="req" cx="{gx}" cy="{y - 5}" r="2.6" style="animation-delay:{i * 0.27:.2f}s"/>\n'
+                f'<circle class="res" cx="{gx}" cy="{y + 5}" r="2.6" style="animation-delay:{(2 - i) * 0.27:.2f}s"/>'
+            )
+    backend_cx = 36 + box_w + gap + box_w / 2
+    parts.append(
+        f'<line x1="{backend_cx}" y1="{top + box_h}" x2="{backend_cx}" y2="{top + box_h + 26}" stroke="{EDGE}" stroke-dasharray="3 3"/>\n'
+        f'<rect class="db" x="{backend_cx - 48}" y="{top + box_h + 26}" width="96" height="26" rx="13" fill="none" stroke="{V2}"/>\n'
+        f'<text class="mono" x="{backend_cx}" y="{top + box_h + 43}" text-anchor="middle" fill="{MUTED}" font-size="11">Postgres</text>\n'
+        f'<text class="mono" x="36" y="28" fill="{V3}" font-size="12">browser → frontend → backend → ml → model</text>\n'
+        f'<text class="mono" x="644" y="{top + box_h + 43}" text-anchor="end" fill="{FAINT}" font-size="11">HTTP only · no shared code</text>'
+    )
+    return svg(
+        680, 196, "architecture: frontend → backend → ml → model API", style, "\n".join(parts)
+    )
+
+
+def workflow() -> str:
+    style = f"""
+.mono{{font-family:{MONO}}}
+.sans{{font-family:{SANS}}}
+.node{{fill:{BG};stroke:{V2};animation:lit 5s ease-in-out infinite}}
+@keyframes lit{{0%,100%{{stroke:{V2}}}12%{{stroke:{ACC}}}24%{{stroke:{V2}}}}}
+.step{{animation:step 5s steps(1) infinite;opacity:.35}}
+@keyframes step{{0%{{opacity:1}}20%,100%{{opacity:.35}}}}"""
+    spacing, y = 130, 70
+    parts = [frame(680, 220)]
+    for i, (name, hint) in enumerate(STEPS):
+        cx = 80 + i * spacing
+        if i < len(STEPS) - 1:
+            parts.append(
+                f'<line x1="{cx + 18}" y1="{y}" x2="{cx + spacing - 18}" y2="{y}" stroke="{EDGE}"/>'
+            )
+        parts.append(
+            f'<circle class="node" cx="{cx}" cy="{y}" r="17" style="animation-delay:{i * 0.6:.1f}s"/>\n'
+            f'<text class="mono" x="{cx}" y="{y + 4}" text-anchor="middle" fill="{ACC}" font-size="12">{i + 1}</text>\n'
+            f'<text class="mono" x="{cx}" y="{y + 40}" text-anchor="middle" fill="{WHITE}" font-size="13">{name}</text>\n'
+            f'<text class="sans" x="{cx}" y="{y + 58}" text-anchor="middle" fill="{MUTED}" font-size="11">{hint}</text>'
+        )
+    tasks_cx = 80 + 3 * spacing
+    parts.append(
+        f'<line x1="{tasks_cx}" y1="{y + 66}" x2="{tasks_cx}" y2="{y + 82}" stroke="{EDGE}" stroke-dasharray="3 3"/>\n'
+        f'<rect x="36" y="{y + 82}" width="608" height="40" rx="10" fill="none" stroke="{EDGE}"/>\n'
+        f'<text class="mono" x="52" y="{y + 107}" fill="{V3}" font-size="12">each task</text>'
+    )
+    x = 140
+    for i, label in enumerate(TASK_LOOP):
+        text_len = len(label.replace("&lt;", "<").replace("&gt;", ">"))
+        parts.append(
+            f'<text class="mono step" x="{x}" y="{y + 107}" fill="{WHITE}" font-size="12" '
+            f'style="animation-delay:{i}s">{label}</text>'
+        )
+        x += text_len * MONO_CHAR
+        if i < len(TASK_LOOP) - 1:
+            parts.append(
+                f'<text class="mono" x="{x + 11}" y="{y + 107}" fill="{DIM}" font-size="12">→</text>'
+            )
+            x += 34
+    parts.append(
+        f'<text class="mono" x="36" y="32" fill="{V3}" font-size="12">brief → tasks → verified commits</text>'
+    )
+    return svg(
+        680, 220, "workflow: input → brief → approve → tasks → review", style, "\n".join(parts)
+    )
+
+
 def main(out_dir: str) -> None:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "header.svg").write_text(header(), encoding="utf-8")
-    (out / "footer.svg").write_text(footer(), encoding="utf-8")
+    pictures = {
+        "header": header,
+        "stack": stack,
+        "architecture": architecture,
+        "workflow": workflow,
+        "footer": footer,
+    }
+    for name, draw in pictures.items():
+        (out / f"{name}.svg").write_text(draw(), encoding="utf-8")
     for number, label in enumerate(SECTIONS, start=1):
         (out / f"divider-{number:02d}.svg").write_text(divider(number, label), encoding="utf-8")
-    print(f"wrote {len(SECTIONS) + 2} files to {out}")
+    print(f"wrote {len(SECTIONS) + len(pictures)} files to {out}")
 
 
 if __name__ == "__main__":

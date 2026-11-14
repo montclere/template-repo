@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="150" viewBox="0 0 680 150" role="img" aria-label="stack: React, FastAPI, Postgres, Anthropic API, Docker">
+<title>stack: React, FastAPI, Postgres, Anthropic API, Docker</title>
+<style>
+
+.mono{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.pill{fill:none;stroke:#251E45;animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{stroke:#251E45}35%{stroke:#8B7CF6}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="680" height="150" rx="14" fill="#0B0A12"/>
+<rect x="0.5" y="0.5" width="679" height="149" rx="14" fill="none" stroke="#251E45"/>
+<text class="mono" x="36" y="38" fill="#8B7CF6" font-size="12">frontend</text>
+<rect class="pill" x="132" y="22" width="56" height="22" rx="11" style="animation-delay:0.00s"/>
+<text class="mono" x="160.0" y="37" text-anchor="middle" fill="#F4F2FF" font-size="12">React</text>
+<rect class="pill" x="196" y="22" width="49" height="22" rx="11" style="animation-delay:0.18s"/>
+<text class="mono" x="220.5" y="37" text-anchor="middle" fill="#F4F2FF" font-size="12">Vite</text>
+<rect class="pill" x="253" y="22" width="92" height="22" rx="11" style="animation-delay:0.36s"/>
+<text class="mono" x="299.0" y="37" text-anchor="middle" fill="#F4F2FF" font-size="12">TypeScript</text>
+<rect class="pill" x="353" y="22" width="78" height="22" rx="11" style="animation-delay:0.54s"/>
+<text class="mono" x="392.0" y="37" text-anchor="middle" fill="#F4F2FF" font-size="12">Tailwind</text>
+<rect class="pill" x="439" y="22" width="85" height="22" rx="11" style="animation-delay:0.72s"/>
+<text class="mono" x="481.5" y="37" text-anchor="middle" fill="#F4F2FF" font-size="12">shadcn/ui</text>
+<text class="mono" x="36" y="70" fill="#8B7CF6" font-size="12">backend</text>
+<rect class="pill" x="132" y="54" width="70" height="22" rx="11" style="animation-delay:0.90s"/>
+<text class="mono" x="167.0" y="69" text-anchor="middle" fill="#F4F2FF" font-size="12">FastAPI</text>
+<rect class="pill" x="210" y="54" width="92" height="22" rx="11" style="animation-delay:1.08s"/>
+<text class="mono" x="256.0" y="69" text-anchor="middle" fill="#F4F2FF" font-size="12">SQLAlchemy</text>
+<rect class="pill" x="310" y="54" width="78" height="22" rx="11" style="animation-delay:1.26s"/>
+<text class="mono" x="349.0" y="69" text-anchor="middle" fill="#F4F2FF" font-size="12">Postgres</text>
+<rect class="pill" x="396" y="54" width="78" height="22" rx="11" style="animation-delay:1.44s"/>
+<text class="mono" x="435.0" y="69" text-anchor="middle" fill="#F4F2FF" font-size="12">pgvector</text>
+<text class="mono" x="36" y="102" fill="#8B7CF6" font-size="12">ml</text>
+<rect class="pill" x="132" y="86" width="70" height="22" rx="11" style="animation-delay:1.62s"/>
+<text class="mono" x="167.0" y="101" text-anchor="middle" fill="#F4F2FF" font-size="12">FastAPI</text>
+<rect class="pill" x="210" y="86" width="178" height="22" rx="11" style="animation-delay:1.80s"/>
+<text class="mono" x="299.0" y="101" text-anchor="middle" fill="#F4F2FF" font-size="12">Anthropic Messages API</text>
+<rect class="pill" x="396" y="86" width="56" height="22" rx="11" style="animation-delay:1.98s"/>
+<text class="mono" x="424.0" y="101" text-anchor="middle" fill="#F4F2FF" font-size="12">evals</text>
+<text class="mono" x="36" y="134" fill="#8B7CF6" font-size="12">tooling</text>
+<rect class="pill" x="132" y="118" width="121" height="22" rx="11" style="animation-delay:2.16s"/>
+<text class="mono" x="192.5" y="133" text-anchor="middle" fill="#F4F2FF" font-size="12">Docker Compose</text>
+<rect class="pill" x="261" y="118" width="34" height="22" rx="11" style="animation-delay:2.34s"/>
+<text class="mono" x="278.0" y="133" text-anchor="middle" fill="#F4F2FF" font-size="12">uv</text>
+<rect class="pill" x="303" y="118" width="49" height="22" rx="11" style="animation-delay:2.52s"/>
+<text class="mono" x="327.5" y="133" text-anchor="middle" fill="#F4F2FF" font-size="12">ruff</text>
+<rect class="pill" x="360" y="118" width="92" height="22" rx="11" style="animation-delay:2.70s"/>
+<text class="mono" x="406.0" y="133" text-anchor="middle" fill="#F4F2FF" font-size="12">pre-commit</text>
+<rect class="pill" x="460" y="118" width="121" height="22" rx="11" style="animation-delay:2.88s"/>
+<text class="mono" x="520.5" y="133" text-anchor="middle" fill="#F4F2FF" font-size="12">GitHub Actions</text>
+</svg>

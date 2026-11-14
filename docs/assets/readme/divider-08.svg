@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="08 / agent rules">
-<title>08 / agent rules</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="08 / repo map">
+<title>08 / repo map</title>
 <style>
 
 .tok{fill:#8B7CF6;opacity:.6;animation:tok 2.8s ease-in-out infinite}
@@ -22,5 +22,5 @@
 <rect class="tok" x="387" y="13" width="48" height="14" rx="3" style="animation-delay:0.99s"/>
 <rect class="tok" x="440" y="13" width="16" height="14" rx="3" style="animation-delay:1.08s"/>
 <rect class="tok" x="461" y="13" width="28" height="14" rx="3" style="animation-delay:1.17s"/>
-<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">08 / agent rules</text>
+<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">08 / repo map</text>
 </svg>

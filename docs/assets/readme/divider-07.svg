@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="07 / skills">
-<title>07 / skills</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="40" viewBox="0 0 680 40" role="img" aria-label="07 / checks">
+<title>07 / checks</title>
 <style>
 
 .tok{fill:#8B7CF6;opacity:.6;animation:tok 2.8s ease-in-out infinite}
@@ -23,5 +23,5 @@
 <rect class="tok" x="416" y="13" width="44" height="14" rx="3" style="animation-delay:1.08s"/>
 <rect class="tok" x="465" y="13" width="12" height="14" rx="3" style="animation-delay:1.17s"/>
 <rect class="tok" x="482" y="13" width="34" height="14" rx="3" style="animation-delay:1.26s"/>
-<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">07 / skills</text>
+<text class="label" x="540" y="25" fill="#8B7CF6" font-size="12">07 / checks</text>
 </svg>

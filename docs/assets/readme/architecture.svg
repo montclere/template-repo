@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="196" viewBox="0 0 680 196" role="img" aria-label="architecture: frontend → backend → ml → model API">
+<title>architecture: frontend → backend → ml → model API</title>
+<style>
+
+.mono{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.req{fill:#8B7CF6;animation:req 3.2s linear infinite}
+.res{fill:#E9E5FF;opacity:0;animation:res 3.2s linear infinite}
+@keyframes req{0%{transform:translateX(0);opacity:1}25%{transform:translateX(20px);opacity:1}26%,100%{opacity:0}}
+@keyframes res{0%,50%{opacity:0;transform:translateX(20px)}51%{opacity:1;transform:translateX(20px)}75%{opacity:1;transform:translateX(0)}76%,100%{opacity:0}}
+.db{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect width="680" height="196" rx="14" fill="#0B0A12"/>
+<rect x="0.5" y="0.5" width="679" height="195" rx="14" fill="none" stroke="#251E45"/>
+<rect x="36" y="44" width="128" height="78" rx="10" fill="none" stroke="#5B4BC4"/>
+<text class="mono" x="100" y="72" text-anchor="middle" fill="#F4F2FF" font-size="14">frontend</text>
+<text class="sans" x="100" y="92" text-anchor="middle" fill="#A9A3C9" font-size="11">Vite + React</text>
+<text class="sans" x="100" y="108" text-anchor="middle" fill="#6E6890" font-size="11">screens only</text>
+<line x1="166" y1="83.0" x2="194" y2="83.0" stroke="#251E45"/>
+<circle class="req" cx="170" cy="78.0" r="2.6" style="animation-delay:0.00s"/>
+<circle class="res" cx="170" cy="88.0" r="2.6" style="animation-delay:0.54s"/>
+<rect x="196" y="44" width="128" height="78" rx="10" fill="none" stroke="#5B4BC4"/>
+<text class="mono" x="260" y="72" text-anchor="middle" fill="#F4F2FF" font-size="14">backend</text>
+<text class="sans" x="260" y="92" text-anchor="middle" fill="#A9A3C9" font-size="11">FastAPI</text>
+<text class="sans" x="260" y="108" text-anchor="middle" fill="#6E6890" font-size="11">data + rules</text>
+<line x1="326" y1="83.0" x2="354" y2="83.0" stroke="#251E45"/>
+<circle class="req" cx="330" cy="78.0" r="2.6" style="animation-delay:0.27s"/>
+<circle class="res" cx="330" cy="88.0" r="2.6" style="animation-delay:0.27s"/>
+<rect x="356" y="44" width="128" height="78" rx="10" fill="none" stroke="#5B4BC4"/>
+<text class="mono" x="420" y="72" text-anchor="middle" fill="#F4F2FF" font-size="14">ml</text>
+<text class="sans" x="420" y="92" text-anchor="middle" fill="#A9A3C9" font-size="11">FastAPI</text>
+<text class="sans" x="420" y="108" text-anchor="middle" fill="#6E6890" font-size="11">prompts · RAG · agents</text>
+<line x1="486" y1="83.0" x2="514" y2="83.0" stroke="#251E45"/>
+<circle class="req" cx="490" cy="78.0" r="2.6" style="animation-delay:0.54s"/>
+<circle class="res" cx="490" cy="88.0" r="2.6" style="animation-delay:0.00s"/>
+<rect x="516" y="44" width="128" height="78" rx="10" fill="none" stroke="#4A4466"/>
+<text class="mono" x="580" y="72" text-anchor="middle" fill="#F4F2FF" font-size="14">model</text>
+<text class="sans" x="580" y="92" text-anchor="middle" fill="#A9A3C9" font-size="11">Anthropic API</text>
+<text class="sans" x="580" y="108" text-anchor="middle" fill="#6E6890" font-size="11">key lives in ml</text>
+<line x1="260.0" y1="122" x2="260.0" y2="148" stroke="#251E45" stroke-dasharray="3 3"/>
+<rect class="db" x="212.0" y="148" width="96" height="26" rx="13" fill="none" stroke="#5B4BC4"/>
+<text class="mono" x="260.0" y="165" text-anchor="middle" fill="#A9A3C9" font-size="11">Postgres</text>
+<text class="mono" x="36" y="28" fill="#8B7CF6" font-size="12">browser → frontend → backend → ml → model</text>
+<text class="mono" x="644" y="165" text-anchor="end" fill="#4A4466" font-size="11">HTTP only · no shared code</text>
+</svg>
