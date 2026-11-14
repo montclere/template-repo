@@ -39,6 +39,17 @@ MONO_CHAR = 7.2
 TAGLINE = "Repository template for AI projects"
 TYPE_START, TYPE_STEP, HOLD_UNTIL, ERASE_STEP, CYCLE = 0.4, 0.09, 7.5, 0.035, 10.0
 
+NAV = [
+    (1, "Идея"),
+    (2, "Как устроено"),
+    (3, "Быстрый старт"),
+    (4, "Как вести проект"),
+    (5, "Куда писать код"),
+    (6, "ИИ-часть"),
+    (7, "Проверки"),
+    (12, "Вопросы"),
+]
+
 SERVICES = [
     ("frontend", "Vite + React", "screens only"),
     ("backend", "FastAPI", "data + rules"),
@@ -212,6 +223,22 @@ def tagline() -> str:
     return svg(680, 56, TAGLINE, "\n".join(rules), body)
 
 
+def nav_button(order: int, number: int, label: str) -> str:
+    size, char, pad, height = 13, 7.8, 16, 34
+    width = round(pad * 2 + (2 + len(label)) * char + 8)
+    style = f"""
+.mono{{font-family:{MONO}}}
+.edge{{fill:{BG};stroke:{V2};animation:glow 4.8s ease-in-out infinite}}
+@keyframes glow{{0%,100%{{stroke:{V2}}}12%{{stroke:{ACC}}}28%{{stroke:{V2}}}}}"""
+    body = (
+        f'<rect class="edge" x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="{height / 2}" '
+        f'style="animation-delay:{order * 0.35:.2f}s"/>\n'
+        f'<text class="mono" x="{width / 2}" y="{height / 2 + 4.5}" text-anchor="middle" font-size="{size}">'
+        f'<tspan fill="{V3}">{number:02d}</tspan><tspan fill="{WHITE}" dx="8">{label}</tspan></text>'
+    )
+    return svg(width, height, f"{number:02d} {label}", style, body)
+
+
 def architecture() -> str:
     style = f"""
 .mono{{font-family:{MONO}}}
@@ -316,9 +343,13 @@ def main(out_dir: str) -> None:
     }
     for name, draw in pictures.items():
         (out / f"{name}.svg").write_text(draw(), encoding="utf-8")
+    for order, (number, label) in enumerate(NAV):
+        (out / f"nav-{number:02d}.svg").write_text(
+            nav_button(order, number, label), encoding="utf-8"
+        )
     for number, label in enumerate(SECTIONS, start=1):
         (out / f"divider-{number:02d}.svg").write_text(divider(number, label), encoding="utf-8")
-    print(f"wrote {len(SECTIONS) + len(pictures)} files to {out}")
+    print(f"wrote {len(SECTIONS) + len(pictures) + len(NAV)} files to {out}")
 
 
 if __name__ == "__main__":

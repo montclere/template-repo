@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="34" viewBox="0 0 118 34" role="img" aria-label="07 Проверки">
+<title>07 Проверки</title>
+<style>
+
+.mono{font-family:'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.edge{fill:#0B0A12;stroke:#5B4BC4;animation:glow 4.8s ease-in-out infinite}
+@keyframes glow{0%,100%{stroke:#5B4BC4}12%{stroke:#E9E5FF}28%{stroke:#5B4BC4}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect class="edge" x="0.5" y="0.5" width="117" height="33" rx="17.0" style="animation-delay:2.10s"/>
+<text class="mono" x="59.0" y="21.5" text-anchor="middle" font-size="13"><tspan fill="#8B7CF6">07</tspan><tspan fill="#F4F2FF" dx="8">Проверки</tspan></text>
+</svg>
