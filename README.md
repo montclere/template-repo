@@ -3,19 +3,19 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/readme/tagline.svg" width="100%" alt="Repository template for AI projects">
+  <img src="docs/assets/readme/tagline.svg?v=64b618aab7" width="100%" alt="Repository template for AI projects">
 </p>
 
 <p align="center">
-  <a href="#идея"><img src="docs/assets/readme/nav-01.svg" height="30" alt="idea"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#как-устроено"><img src="docs/assets/readme/nav-02.svg" height="30" alt="architecture"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#быстрый-старт"><img src="docs/assets/readme/nav-03.svg" height="30" alt="quick start"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#как-вести-проект"><img src="docs/assets/readme/nav-04.svg" height="30" alt="workflow"></a>
+  <a href="#идея"><img src="docs/assets/readme/nav-01.svg?v=5ad6e0d122" height="30" alt="idea"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#как-устроено"><img src="docs/assets/readme/nav-02.svg?v=e4d0092a4e" height="30" alt="architecture"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#быстрый-старт"><img src="docs/assets/readme/nav-03.svg?v=7fe05fff1f" height="30" alt="quick start"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#как-вести-проект"><img src="docs/assets/readme/nav-04.svg?v=06a43b382d" height="30" alt="workflow"></a>
   <br>
-  <a href="#куда-писать-код"><img src="docs/assets/readme/nav-05.svg" height="30" alt="where to code"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#ии-часть"><img src="docs/assets/readme/nav-06.svg" height="30" alt="ai layer"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#проверки"><img src="docs/assets/readme/nav-07.svg" height="30" alt="checks"></a><img src="docs/assets/readme/nav-sep.svg" height="30" alt="">
-  <a href="#вопросы-и-ответы"><img src="docs/assets/readme/nav-12.svg" height="30" alt="faq"></a>
+  <a href="#куда-писать-код"><img src="docs/assets/readme/nav-05.svg?v=da08ab452f" height="30" alt="where to code"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#ии-часть"><img src="docs/assets/readme/nav-06.svg?v=13ae94c398" height="30" alt="ai layer"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#проверки"><img src="docs/assets/readme/nav-07.svg?v=32487769d1" height="30" alt="checks"></a><img src="docs/assets/readme/nav-sep.svg?v=93bb5fff90" height="30" alt="">
+  <a href="#вопросы-и-ответы"><img src="docs/assets/readme/nav-12.svg?v=c5a063ffb1" height="30" alt="faq"></a>
 </p>
 
 <img src="docs/assets/readme/divider-01.svg" width="100%" alt="">
