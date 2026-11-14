@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="66" height="26" viewBox="0 0 66 26" role="img" aria-label="workflow">
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="30" viewBox="0 0 79 30" role="img" aria-label="workflow">
 <title>workflow</title>
 <style>
-.t{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500}
+
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}
 </style>
-<text class="t" x="33.0" y="17" text-anchor="middle" fill="#8B7CF6" font-size="12">workflow</text>
+<text x="39.5" y="19" text-anchor="middle" fill="#8B7CF6" font-size="15" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="500">workflow</text>
 </svg>

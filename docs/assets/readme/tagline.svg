@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="42" viewBox="0 0 680 42" role="img" aria-label="Repository template for AI projects">
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="56" viewBox="0 0 680 56" role="img" aria-label="Repository template for AI projects">
 <title>Repository template for AI projects</title>
 <style>
-.t{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500}
+.t{font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-weight:500}
 .c{animation:10.0s steps(1,end) infinite}
 .caret{fill:#8B7CF6;animation:move 10.0s steps(1,end) infinite}
 .blink{animation:blink 1s steps(1) infinite}
@@ -37,44 +37,44 @@
 @keyframes c32{0%{opacity:0}33.70%{opacity:1}75.70%,100%{opacity:0}}
 @keyframes c33{0%{opacity:0}34.60%{opacity:1}75.35%,100%{opacity:0}}
 @keyframes c34{0%{opacity:0}35.50%{opacity:1}75.00%,100%{opacity:0}}
-@keyframes move{0%{transform:translateX(-420.00px)}4.90%{transform:translateX(-408.00px)}5.80%{transform:translateX(-396.00px)}6.70%{transform:translateX(-384.00px)}7.60%{transform:translateX(-372.00px)}8.50%{transform:translateX(-360.00px)}9.40%{transform:translateX(-348.00px)}10.30%{transform:translateX(-336.00px)}11.20%{transform:translateX(-324.00px)}12.10%{transform:translateX(-312.00px)}13.00%{transform:translateX(-300.00px)}13.90%{transform:translateX(-288.00px)}14.80%{transform:translateX(-276.00px)}15.70%{transform:translateX(-264.00px)}16.60%{transform:translateX(-252.00px)}17.50%{transform:translateX(-240.00px)}18.40%{transform:translateX(-228.00px)}19.30%{transform:translateX(-216.00px)}20.20%{transform:translateX(-204.00px)}21.10%{transform:translateX(-192.00px)}22.00%{transform:translateX(-180.00px)}22.90%{transform:translateX(-168.00px)}23.80%{transform:translateX(-156.00px)}24.70%{transform:translateX(-144.00px)}25.60%{transform:translateX(-132.00px)}26.50%{transform:translateX(-120.00px)}27.40%{transform:translateX(-108.00px)}28.30%{transform:translateX(-96.00px)}29.20%{transform:translateX(-84.00px)}30.10%{transform:translateX(-72.00px)}31.00%{transform:translateX(-60.00px)}31.90%{transform:translateX(-48.00px)}32.80%{transform:translateX(-36.00px)}33.70%{transform:translateX(-24.00px)}34.60%{transform:translateX(-12.00px)}35.50%{transform:translateX(0.00px)}75.00%{transform:translateX(-12.00px)}75.35%{transform:translateX(-24.00px)}75.70%{transform:translateX(-36.00px)}76.05%{transform:translateX(-48.00px)}76.40%{transform:translateX(-60.00px)}76.75%{transform:translateX(-72.00px)}77.10%{transform:translateX(-84.00px)}77.45%{transform:translateX(-96.00px)}77.80%{transform:translateX(-108.00px)}78.15%{transform:translateX(-120.00px)}78.50%{transform:translateX(-132.00px)}78.85%{transform:translateX(-144.00px)}79.20%{transform:translateX(-156.00px)}79.55%{transform:translateX(-168.00px)}79.90%{transform:translateX(-180.00px)}80.25%{transform:translateX(-192.00px)}80.60%{transform:translateX(-204.00px)}80.95%{transform:translateX(-216.00px)}81.30%{transform:translateX(-228.00px)}81.65%{transform:translateX(-240.00px)}82.00%{transform:translateX(-252.00px)}82.35%{transform:translateX(-264.00px)}82.70%{transform:translateX(-276.00px)}83.05%{transform:translateX(-288.00px)}83.40%{transform:translateX(-300.00px)}83.75%{transform:translateX(-312.00px)}84.10%{transform:translateX(-324.00px)}84.45%{transform:translateX(-336.00px)}84.80%{transform:translateX(-348.00px)}85.15%{transform:translateX(-360.00px)}85.50%{transform:translateX(-372.00px)}85.85%{transform:translateX(-384.00px)}86.20%{transform:translateX(-396.00px)}86.55%{transform:translateX(-408.00px)}86.90%{transform:translateX(-420.00px)}}
+@keyframes move{0%{transform:translateX(-588.00px)}4.90%{transform:translateX(-571.20px)}5.80%{transform:translateX(-554.40px)}6.70%{transform:translateX(-537.60px)}7.60%{transform:translateX(-520.80px)}8.50%{transform:translateX(-504.00px)}9.40%{transform:translateX(-487.20px)}10.30%{transform:translateX(-470.40px)}11.20%{transform:translateX(-453.60px)}12.10%{transform:translateX(-436.80px)}13.00%{transform:translateX(-420.00px)}13.90%{transform:translateX(-403.20px)}14.80%{transform:translateX(-386.40px)}15.70%{transform:translateX(-369.60px)}16.60%{transform:translateX(-352.80px)}17.50%{transform:translateX(-336.00px)}18.40%{transform:translateX(-319.20px)}19.30%{transform:translateX(-302.40px)}20.20%{transform:translateX(-285.60px)}21.10%{transform:translateX(-268.80px)}22.00%{transform:translateX(-252.00px)}22.90%{transform:translateX(-235.20px)}23.80%{transform:translateX(-218.40px)}24.70%{transform:translateX(-201.60px)}25.60%{transform:translateX(-184.80px)}26.50%{transform:translateX(-168.00px)}27.40%{transform:translateX(-151.20px)}28.30%{transform:translateX(-134.40px)}29.20%{transform:translateX(-117.60px)}30.10%{transform:translateX(-100.80px)}31.00%{transform:translateX(-84.00px)}31.90%{transform:translateX(-67.20px)}32.80%{transform:translateX(-50.40px)}33.70%{transform:translateX(-33.60px)}34.60%{transform:translateX(-16.80px)}35.50%{transform:translateX(0.00px)}75.00%{transform:translateX(-16.80px)}75.35%{transform:translateX(-33.60px)}75.70%{transform:translateX(-50.40px)}76.05%{transform:translateX(-67.20px)}76.40%{transform:translateX(-84.00px)}76.75%{transform:translateX(-100.80px)}77.10%{transform:translateX(-117.60px)}77.45%{transform:translateX(-134.40px)}77.80%{transform:translateX(-151.20px)}78.15%{transform:translateX(-168.00px)}78.50%{transform:translateX(-184.80px)}78.85%{transform:translateX(-201.60px)}79.20%{transform:translateX(-218.40px)}79.55%{transform:translateX(-235.20px)}79.90%{transform:translateX(-252.00px)}80.25%{transform:translateX(-268.80px)}80.60%{transform:translateX(-285.60px)}80.95%{transform:translateX(-302.40px)}81.30%{transform:translateX(-319.20px)}81.65%{transform:translateX(-336.00px)}82.00%{transform:translateX(-352.80px)}82.35%{transform:translateX(-369.60px)}82.70%{transform:translateX(-386.40px)}83.05%{transform:translateX(-403.20px)}83.40%{transform:translateX(-420.00px)}83.75%{transform:translateX(-436.80px)}84.10%{transform:translateX(-453.60px)}84.45%{transform:translateX(-470.40px)}84.80%{transform:translateX(-487.20px)}85.15%{transform:translateX(-504.00px)}85.50%{transform:translateX(-520.80px)}85.85%{transform:translateX(-537.60px)}86.20%{transform:translateX(-554.40px)}86.55%{transform:translateX(-571.20px)}86.90%{transform:translateX(-588.00px)}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}
 </style>
-<defs><linearGradient id="ink" gradientUnits="userSpaceOnUse" x1="130" x2="550" y1="0" y2="0">
+<defs><linearGradient id="ink" gradientUnits="userSpaceOnUse" x1="46" x2="634" y1="0" y2="0">
 <stop offset="0" stop-color="#5B4BC4"/><stop offset="1" stop-color="#8B7CF6"/>
 </linearGradient></defs>
 <g fill="url(#ink)">
-<text class="t c" x="136.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c0">R</text>
-<text class="t c" x="148.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c1">e</text>
-<text class="t c" x="160.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c2">p</text>
-<text class="t c" x="172.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c3">o</text>
-<text class="t c" x="184.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c4">s</text>
-<text class="t c" x="196.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c5">i</text>
-<text class="t c" x="208.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c6">t</text>
-<text class="t c" x="220.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c7">o</text>
-<text class="t c" x="232.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c8">r</text>
-<text class="t c" x="244.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c9">y</text>
-<text class="t c" x="268.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c11">t</text>
-<text class="t c" x="280.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c12">e</text>
-<text class="t c" x="292.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c13">m</text>
-<text class="t c" x="304.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c14">p</text>
-<text class="t c" x="316.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c15">l</text>
-<text class="t c" x="328.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c16">a</text>
-<text class="t c" x="340.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c17">t</text>
-<text class="t c" x="352.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c18">e</text>
-<text class="t c" x="376.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c20">f</text>
-<text class="t c" x="388.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c21">o</text>
-<text class="t c" x="400.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c22">r</text>
-<text class="t c" x="424.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c24">A</text>
-<text class="t c" x="436.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c25">I</text>
-<text class="t c" x="460.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c27">p</text>
-<text class="t c" x="472.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c28">r</text>
-<text class="t c" x="484.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c29">o</text>
-<text class="t c" x="496.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c30">j</text>
-<text class="t c" x="508.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c31">e</text>
-<text class="t c" x="520.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c32">c</text>
-<text class="t c" x="532.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c33">t</text>
-<text class="t c" x="544.00" y="30" text-anchor="middle" font-size="20" style="animation-name:c34">s</text>
+<text class="t c" x="54.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c0">R</text>
+<text class="t c" x="71.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c1">e</text>
+<text class="t c" x="88.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c2">p</text>
+<text class="t c" x="104.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c3">o</text>
+<text class="t c" x="121.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c4">s</text>
+<text class="t c" x="138.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c5">i</text>
+<text class="t c" x="155.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c6">t</text>
+<text class="t c" x="172.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c7">o</text>
+<text class="t c" x="188.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c8">r</text>
+<text class="t c" x="205.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c9">y</text>
+<text class="t c" x="239.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c11">t</text>
+<text class="t c" x="256.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c12">e</text>
+<text class="t c" x="272.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c13">m</text>
+<text class="t c" x="289.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c14">p</text>
+<text class="t c" x="306.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c15">l</text>
+<text class="t c" x="323.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c16">a</text>
+<text class="t c" x="340.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c17">t</text>
+<text class="t c" x="356.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c18">e</text>
+<text class="t c" x="390.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c20">f</text>
+<text class="t c" x="407.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c21">o</text>
+<text class="t c" x="424.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c22">r</text>
+<text class="t c" x="457.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c24">A</text>
+<text class="t c" x="474.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c25">I</text>
+<text class="t c" x="508.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c27">p</text>
+<text class="t c" x="524.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c28">r</text>
+<text class="t c" x="541.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c29">o</text>
+<text class="t c" x="558.40" y="38" text-anchor="middle" font-size="28" style="animation-name:c30">j</text>
+<text class="t c" x="575.20" y="38" text-anchor="middle" font-size="28" style="animation-name:c31">e</text>
+<text class="t c" x="592.00" y="38" text-anchor="middle" font-size="28" style="animation-name:c32">c</text>
+<text class="t c" x="608.80" y="38" text-anchor="middle" font-size="28" style="animation-name:c33">t</text>
+<text class="t c" x="625.60" y="38" text-anchor="middle" font-size="28" style="animation-name:c34">s</text>
 </g>
-<g class="blink"><rect class="caret" x="552" y="11" width="2" height="23"/></g>
+<g class="blink"><rect class="caret" x="636" y="15" width="3" height="28"/></g>
 </svg>
