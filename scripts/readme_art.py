@@ -1,7 +1,6 @@
 """Generates the animated README art. Run from the repo root: python scripts/readme_art.py"""
 # ruff: noqa: E501  (SVG markup lines are kept whole to stay readable)
 
-import base64
 import sys
 from pathlib import Path
 
@@ -18,10 +17,10 @@ FAINT = "#4A4466"
 MONO = "'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
 
-# Space Mono Bold, printable ASCII only (SIL OFL 1.1, see scripts/fonts/OFL.txt).
-# Embedded as data: because an SVG shown through <img> cannot load external fonts.
-FONT_FILE = Path(__file__).parent / "fonts" / "space-mono-bold-ascii.woff2"
-FONT_ADVANCE = 0.612  # every glyph is this many em wide
+# System terminal font for the typewriter line. Each glyph is centred in a 0.6em cell,
+# so any monospace font the viewer has lines up evenly.
+TERMINAL = "ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
+CELL_EM = 0.6
 
 REDUCED = "@media (prefers-reduced-motion: reduce){*{animation:none!important}}"
 
@@ -173,25 +172,15 @@ def footer() -> str:
     return svg(680, 150, "end of sequence: brief → tasks → verified commits", style, body)
 
 
-def font_face() -> str:
-    font = base64.b64encode(FONT_FILE.read_bytes()).decode()
-    return f"@font-face{{font-family:SpaceMono;src:url(data:font/woff2;base64,{font}) format('woff2')}}"
-
-
-def nav_link(order: int, label: str) -> str:
-    """One menu link: violet text, faint underline that lights up in a wave. No background."""
-    size, height, pad = 15, 30, 4
-    width = round(len(label) * size * FONT_ADVANCE + pad * 2)
-    style = f"""{font_face()}
-.t{{font-family:SpaceMono,{MONO};font-weight:700}}
-.line{{stroke:{V3};opacity:.25;animation:wave 4.8s ease-in-out infinite}}
-@keyframes wave{{0%,100%{{opacity:.25}}15%{{opacity:1}}35%{{opacity:.25}}}}"""
+def nav_link(label: str) -> str:
+    """One menu link: plain system UI font in violet. Wide enough for any fallback font."""
+    size, height, pad = 15, 30, 6
+    width = round(len(label) * size * 0.56 + pad * 2)
     body = (
-        f'<text class="t" x="{pad}" y="18" fill="{V3}" font-size="{size}">{label}</text>\n'
-        f'<line class="line" x1="{pad}" y1="26" x2="{width - pad}" y2="26" stroke-width="1.5" '
-        f'stroke-linecap="round" style="animation-delay:{order * 0.3:.2f}s"/>'
+        f'<text x="{width / 2}" y="19" text-anchor="middle" fill="{V3}" font-size="{size}" '
+        f'font-family="{SANS}" font-weight="500">{label}</text>'
     )
-    return svg(width, height, label, style, body)
+    return svg(width, height, label, "", body)
 
 
 def nav_separator() -> str:
@@ -200,8 +189,8 @@ def nav_separator() -> str:
 
 def tagline() -> str:
     """Typewriter loop: types the line, holds it, erases it, starts again. Transparent background."""
-    n, size = len(TAGLINE), 30
-    cell = size * FONT_ADVANCE
+    n, size = len(TAGLINE), 28
+    cell = size * CELL_EM
     x0 = (680 - n * cell) / 2
     typed = [TYPE_START + (i + 1) * TYPE_STEP for i in range(n)]
     erased = [HOLD_UNTIL + (n - 1 - i) * ERASE_STEP for i in range(n)]
@@ -210,8 +199,7 @@ def tagline() -> str:
         return f"{seconds / CYCLE * 100:.2f}%"
 
     rules = [
-        font_face(),
-        f".t{{font-family:SpaceMono,{MONO};font-weight:700}}",
+        f".t{{font-family:{TERMINAL};font-weight:500}}",
         f".c{{animation:{CYCLE}s steps(1,end) infinite}}",
         f".caret{{fill:{V3};animation:move {CYCLE}s steps(1,end) infinite}}",
         ".blink{animation:blink 1s steps(1) infinite}",
@@ -226,7 +214,7 @@ def tagline() -> str:
             f"{pct(erased[i])},100%{{opacity:0}}}}"
         )
         glyphs.append(
-            f'<text class="t c" x="{x0 + i * cell:.2f}" y="40" font-size="{size}" '
+            f'<text class="t c" x="{x0 + (i + 0.5) * cell:.2f}" y="38" text-anchor="middle" font-size="{size}" '
             f'style="animation-name:c{i}">{ch}</text>'
         )
     steps = [f"0%{{transform:translateX({-n * cell:.2f}px)}}"]
@@ -245,7 +233,7 @@ def tagline() -> str:
 <g fill="url(#ink)">
 {chr(10).join(glyphs)}
 </g>
-<g class="blink"><rect class="caret" x="{x0 + n * cell + 2:.0f}" y="14" width="3" height="32"/></g>"""
+<g class="blink"><rect class="caret" x="{x0 + n * cell + 2:.0f}" y="15" width="3" height="28"/></g>"""
     return svg(680, 56, TAGLINE, "\n".join(rules), body)
 
 
@@ -353,9 +341,9 @@ def main(out_dir: str) -> None:
     }
     for name, draw in pictures.items():
         (out / f"{name}.svg").write_text(draw(), encoding="utf-8")
-    for order, number in enumerate(NAV):
+    for number in NAV:
         label = SECTIONS[number - 1]
-        (out / f"nav-{number:02d}.svg").write_text(nav_link(order, label), encoding="utf-8")
+        (out / f"nav-{number:02d}.svg").write_text(nav_link(label), encoding="utf-8")
     (out / "nav-sep.svg").write_text(nav_separator(), encoding="utf-8")
     for number, label in enumerate(SECTIONS, start=1):
         (out / f"divider-{number:02d}.svg").write_text(divider(number, label), encoding="utf-8")
